@@ -30,14 +30,6 @@ span {
     display: flex;
     flex-wrap: wrap;
 }
-@media (min-width: 980px) {
-    .form {
-        width: 90%;
-    }
-    .texto {
-        font-size: 1em;
-    }
-}
 input, button {
     width: 100%;
 }
@@ -85,4 +77,14 @@ input, button {
 }
 .esconde-campo {
     opacity: 0;
+}
+@media (max-width: 980px) {
+    .form {
+        width: 90%;
+    }
+    .texto {
+        font-size: 1em;
+        text-align: center;
+        width: 90%;
+    }
 }
