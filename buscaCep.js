@@ -17,10 +17,12 @@ botao.addEventListener ('click', function(event) {
 });
 function validaCep(cepValido) {
 
-    function validaCep(cepValido) {
-        
-        return /\d{5}-?\d{3}/.test(cepValido);
+    if (/\d{5}-?\d{3}/.test(cepValido)) {
+        cepValido = true;
+    } else {
+        cepValido = false;
     }
+    return cepValido;
 }
 function buscaCep() {
     

@@ -30,6 +30,14 @@ span {
     display: flex;
     flex-wrap: wrap;
 }
+@media (min-width: 980px) {
+    .form {
+        width: 90%;
+    }
+    .texto {
+        font-size: 1em;
+    }
+}
 input, button {
     width: 100%;
 }
