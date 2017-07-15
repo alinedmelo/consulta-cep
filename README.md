@@ -1,2 +1,2 @@
-# cepjavascript
-Consulta de CEP | Ajax + Javascript
+# buscaCEP
+Consulta de CEP com Ajax e Javascript puro
