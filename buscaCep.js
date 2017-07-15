@@ -17,12 +17,10 @@ botao.addEventListener ('click', function(event) {
 });
 function validaCep(cepValido) {
 
-    if (/\d{5}-?\d{3}/.test(cepValido)) {
-        cepValido = true;
-    } else {
-        cepValido = false;
+    function validaCep(cepValido) {
+        
+        return /\d{5}-?\d{3}/.test(cepValido);
     }
-    return cepValido;
 }
 function buscaCep() {
     
@@ -50,7 +48,7 @@ function buscaCep() {
 function preencheCampos(json) {
 
     if (!('erro' in json)) {
-       atualizaResultado();
+        atualizaResultado();
         resultado.textContent = json.logradouro + ', ' +
                             json.bairro + ' - ' +
                             json.localidade + ' - ' +
