@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title></title>
+        <title>Buscador de Cep</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
+
         <div class="container">
-        <h2>Digite o CEP </h2>
-        <span>(somente números)</span>
-                
-        <form id="form" class="form">
-            <input type="text" name="cep" id="campo-cep" class="cep" value="" placeholder="ex: 12345678" maxlength="8">
-            <button type="submit" id="buscar-cep" class="botao">Consultar</button>              
-        </form>
-        <div id="resultado" class="texto esconde-campo">resultado</div>
+
+            <h2>Digite o CEP </h2>
+            <span>(somente números)</span>    
+            
+            <form id="form" class="form">
+                <input type="text" name="cep" id="campo-cep" class="cep" value="" placeholder="ex: 12345678" maxlength="8">
+                <button type="submit" id="buscar-cep" class="botao">Consultar</button>              
+            </form>
+
+            <div id="resultado" class="texto esconde-campo">resultado</div>
+
         </div>     
-        <script src="buscaCep.js"></script>
+
+        <script src="script/cep.js"></script>
+        <script src="app.js"></script>
+
     </body>
 </html>
