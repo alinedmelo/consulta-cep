@@ -78,3 +78,13 @@ input, button {
 .esconde-campo {
     opacity: 0;
 }
+@media (max-width: 980px) {
+    .form {
+        width: 90%;
+    }
+    .texto {
+        font-size: 1em;
+        text-align: center;
+        width: 90%;
+    }
+}
