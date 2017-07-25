@@ -8,6 +8,6 @@ Consulta de CEP com Ajax e Javascript puro
 - CEP não encontrado da base de dados da API = "CEP não encontrado"
 
 
-## API - Via CEP
+## API utilizada: Via CEP
 
 https://viacep.com.br/
