@@ -15,6 +15,7 @@ botao.addEventListener ('click', function(event) {
             resultado.textContent = 'CEP inválido';
         }
 });
+// valida campo para que sejam digitados somente números
 function validaCep(cepValido) {
 
     return /\d{5}-?\d{3}/.test(cepValido);
