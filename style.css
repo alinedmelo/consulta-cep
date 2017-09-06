@@ -5,13 +5,6 @@ body {
     opacity: 0.95;
     font-family: 'Ubuntu', sans-serif;
 }
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-}
 h2 {
     font-size: 1.7em;
     color: #155e6d;
@@ -24,14 +17,21 @@ span {
     font-weight: 500;
     margin: 0;
 }
+input, button {
+    width: 100%;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
 .form {
     margin: 2em 0;
     width: 20%;
     display: flex;
     flex-wrap: wrap;
-}
-input, button {
-    width: 100%;
 }
 .cep {
     height: auto; 
