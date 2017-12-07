@@ -5,7 +5,7 @@ var resultado = document.querySelector("#resultado");
 botao.addEventListener ('click', function(event) {
 
     event.preventDefault();
-    var form = document.querySelector('#form');
+    var formCep = document.querySelector('#form-cep');
 
         var valida = validaCep(campoCep.value);
         if (valida == true) {
