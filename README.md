@@ -9,7 +9,7 @@ https://alinedmelo.github.io/cepjavascript
 ## Validação do CEP
 
 - Caracteres inválidos = "CEP inválido"
-- CEP não encontrado da base de dados da API = "CEP não encontrado"
+- CEP não encontrado na base de dados da API = "CEP não encontrado"
 
 
 ## API utilizada: Via CEP
