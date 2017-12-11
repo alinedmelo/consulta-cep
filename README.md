@@ -1,6 +1,10 @@
-# Consulta de CEP com Javascript + Ajax
+# Consulta de CEP com Javascript(Vanilla) + Ajax
 
-Consulta de CEP com Ajax e Javascript puro
+Consulta de CEP com Ajax e Javascript
+
+## Acesse
+
+https://alinedmelo.github.io/cepjavascript
 
 ## Validação do CEP
 
