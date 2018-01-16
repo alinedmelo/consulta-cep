@@ -1,3 +1,4 @@
+// variáveis globais
 var campoCep = document.querySelector("#campo-cep");
 var botao = document.querySelector("#buscar-cep");
 var resultado = document.querySelector("#resultado");
@@ -15,6 +16,7 @@ botao.addEventListener ('click', function(event) {
             resultado.textContent = 'CEP inválido';
         }
 });
+
 // valida campo para que sejam digitados somente números
 function validaCep(cepValido) {
 
@@ -56,6 +58,7 @@ function preencheCampos(json) {
         resultado.textContent = 'CEP não encontrado';
     }
 }
+
 function atualizaResultado() {
     
     resultado.textContent ='';
