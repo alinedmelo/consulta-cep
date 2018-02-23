@@ -4,7 +4,7 @@ Consulta de CEP com Ajax e Javascript
 
 ## Acesse
 
-https://alinedmelo.github.io/cepjavascript
+https://alinedmelo.github.io/consulta-cep
 
 ## Validação do CEP
 
