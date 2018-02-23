@@ -1,6 +1,6 @@
-# Consulta de CEP com Javascript(Vanilla) + Ajax
+# Consulta de CEP (API ViaCEP)
 
-Consulta de CEP com Ajax e Javascript
+Consulta de CEP com Ajax e Javascript vanilla
 
 ## Acesse
 
