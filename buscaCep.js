@@ -1,4 +1,4 @@
-// variáveis globais
+// Globals
 var campoCep = document.querySelector("#campo-cep");
 var botao = document.querySelector("#buscar-cep");
 var resultado = document.querySelector("#resultado");
@@ -22,6 +22,7 @@ function validaCep(cepValido) {
 
     return /\d{5}-?\d{3}/.test(cepValido);
 }
+
 function buscaCep() {
     
     var cep = campoCep.value.replace('-', '');
@@ -29,9 +30,7 @@ function buscaCep() {
 
     //Inicio requisição AJAX
     var xhr = new XMLHttpRequest();
-
     xhr.open('GET', url, true);
-
     xhr.responseType = 'text';
 
     xhr.onload = function() {
@@ -45,14 +44,15 @@ function buscaCep() {
     }
     xhr.send();
 }
+
 function preencheCampos(json) {
 
     if (!('erro' in json)) {
         atualizaResultado();
         resultado.textContent = json.logradouro + ', ' +
-                            json.bairro + ' - ' +
-                            json.localidade + ' - ' +
-                            json.uf; 
+                                json.bairro + ' - ' +
+                                json.localidade + ' - ' +
+                                json.uf; 
     } else {
         atualizaResultado();
         resultado.textContent = 'CEP não encontrado';
