@@ -1,66 +1,54 @@
 // Globals
-var campoCep = document.querySelector("#campo-cep");
-var botao = document.querySelector("#buscar-cep");
-var resultado = document.querySelector("#resultado");
+const campoCep = document.querySelector("#campo-cep");
+const form = document.querySelector("#form");
+let resultado = document.querySelector("#resultado");
 
-botao.addEventListener ('click', function(event) {
-
+form.addEventListener('submit', event => {
     event.preventDefault();
-    var formCep = document.querySelector('#form-cep');
-
-        var valida = validaCep(campoCep.value);
-        if (valida == true) {
-            buscaCep();
-        } else {
-            atualizaResultado();
-            resultado.textContent = 'CEP inválido';
-        }
+    
+    if (validaCep(campoCep.value) === true) {
+        buscaCep();
+    } else {
+        atualizaResultado();
+        resultado.textContent = 'CEP inválido';
+    }
 });
 
 // valida campo para que sejam digitados somente números
-function validaCep(cepValido) {
+const validaCep = cepValido => /\d{5}-?\d{3}/.test(cepValido);
 
-    return /\d{5}-?\d{3}/.test(cepValido);
-}
 
-function buscaCep() {
+const buscaCep = () => {
     
-    var cep = campoCep.value.replace('-', '');
-    var url = 'https://viacep.com.br/ws/' + cep + '/json';
+    const cep = campoCep.value.replace('-', '');
+    const url = 'https://viacep.com.br/ws/' + cep + '/json';
 
     //Inicio requisição AJAX
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.responseType = 'text';
 
-    xhr.onload = function() {
-        //Requisição finalizada
-        if (xhr.readyState === 4) {
-            //requisição bem sucedida
-            if (xhr.status === 200) {                									
+    xhr.onload = () => {        
+        //requisição bem sucedida
+        if (xhr.status === 200) {                									
                 preencheCampos(JSON.parse(xhr.responseText)); 
-            } 
         } 
     }
     xhr.send();
 }
 
-function preencheCampos(json) {
+const preencheCampos = json => {
 
-    if (!('erro' in json)) {
+    if (!('erro' in json)) {      
         atualizaResultado();
-        resultado.textContent = json.logradouro + ', ' +
-                                json.bairro + ' - ' +
-                                json.localidade + ' - ' +
-                                json.uf; 
+        resultado.textContent = `${json.logradouro}, ${json.bairro} - ${json.localidade} - ${json.uf}`
     } else {
         atualizaResultado();
-        resultado.textContent = 'CEP não encontrado';
+        resultado.textContent = 'CEP não encontrado na base de dados';
     }
 }
 
-function atualizaResultado() {
-    
+const atualizaResultado = () => {
     resultado.textContent ='';
     resultado.classList.remove('esconde-campo');
 }
